@@ -1,0 +1,364 @@
+@charset "utf-8";
+// 项目通用样式
+* {margin:0;padding:0;border: 0;}
+li {list-style: none;}
+img {border:0;vertical-align: middle;}
+a {color:#2d374b;text-decoration:none}
+a:hover{color:#000;text-decoration:underline}
+p{word-wrap:break-word};
+/*input标签reset*/
+input{-webkit-appearance: none}
+input[type="text"]{-webkit-appearance: none;}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  font-size:14px;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-size: 14px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none !important;
+}
+input[type="number"]{-moz-appearance:textfield;}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+.clearfix {zoom: 1;}
+
+// 滚动条自定义样式
+::-webkit-scrollbar {
+  width: 8px; /*对垂直流动条有效*/
+  height: 8px; /*对水平流动条有效*/
+}
+
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+  background-color: rosybrown;
+  border-radius: 3px;
+}
+
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb{
+  border-radius: 7px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+  background-color: #888;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #f2f2f2;
+}
+
+// 文字溢出显示 省略号
+.textcut{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+html,body,#app,.home,.el-container {width: 100%;height: 100%;}
+span,i,a {display: inline-block;}
+
+// 百度地图 去除logo
+.BMap_cpyCtrl, .anchorBL { display: none;}
+.anchorBL {display: none!important;}
+
+.BMap_pop div{background: rgba(5, 138, 170, 0.75)!important;border-color: transparent!important;}
+.BMap_pop div:nth-child(9){background: transparent!important;}
+.BMap_pop div:nth-child(1)>div {background: transparent!important;}
+.BMap_pop div:nth-child(3)>div {background: transparent!important;}
+.BMap_pop div:nth-child(5)>div {background: transparent!important;}
+.BMap_pop div:nth-child(7)>div {background: transparent!important;}
+.BMap_pop div.BMap_bubble_content {background: transparent!important;color: #fff;}
+
+.BMap_pop div:nth-child(8) {
+  width: 30px !important;height: 15px !important;
+  top: 87px !important;display: none;
+}
+.BMap_pop div:nth-child(8)>img {display: none;}
+// 基础布局
+
+// 侧边栏
+.el-aside.showHide {
+  width: 64px !important;
+
+  .el-menu {
+    .el-submenu__title, .el-menu-item {padding-left: 20px !important;}
+    .el-menu.el-menu--inline {
+      .el-menu-item {padding-left: 20px !important;}
+    }
+  }
+}
+.el-aside {
+  width: 220px !important;
+  background:linear-gradient(to bottom,#30bbe3,#2db6dc, #289cca,#2179b2,#16438a);
+  background:-ms-linear-gradient(to bottom,#30bbe3,#2db6dc, #289cca,#2179b2,#16438a);
+  background:-moz-linear-gradient(to bottom,#30bbe3,#2db6dc, #289cca,#2179b2,#16438a) ;
+  background: -webkit-linear-gradient(to bottom,#30bbe3,#2db6dc, #289cca,#2179b2,#16438a);
+  background: -o-linear-gradient(to bottom,#30bbe3,#2db6dc, #289cca,#2179b2,#16438a);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#30bbe3, endColorstr=#16438a);
+  color: #fff;
+
+  .el-menu {
+    border-right: none;
+    background-color: transparent;
+    i {color: #fff;padding: 0 5px;}
+
+    .el-submenu__title, .el-menu-item {padding-left: 35px !important;}
+    .el-menu.el-menu--inline {
+      .el-menu-item {padding-left: 60px !important;}
+    }
+    .el-submenu__title:hover {
+      background-color: #077797;
+    }
+    .el-menu-item:focus, .el-menu-item:hover {
+      outline: 0;
+      background-color: #077797;
+    }
+  }
+  .logo{
+    text-align: center;
+    line-height: 45px;
+    padding: 10px 10px;
+    span {
+      font-size: 46px;}
+  }
+}
+
+.el-menu--vertical {
+  .el-menu--popup-right-start {
+    background:linear-gradient(to bottom,#30bbe3,#2db6dc, #289cca,#2179b2);
+  }
+  .el-menu-item:focus, .el-menu-item:hover {
+    outline: 0;
+    background-color: #188ebd;
+  }
+}
+// 平台头部
+.el-header {
+  padding: 0 0;
+  height: 55px !important;
+  line-height: 55px;
+  background-color: #30bbe3;
+  color: #fff;
+
+  .menu {
+    height: 55px;
+    i {
+      text-align: center;
+      font-size: 32px;
+      padding: 0 8px;
+    }
+    i:hover {background-color: #13a2cb;}
+  }
+  .user-info.el-dropdown {
+    cursor: pointer;
+    height: 55px;
+    .el-dropdown-link {
+      font-size: 16px;
+      padding: 0 15px;
+      color: #fff;
+      max-width: 92px;
+      overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    }
+    .el-dropdown-link:hover {
+      background-color: #13a2cb;
+      border-radius: 3px;
+    }
+  }
+}
+//平台 内容
+.el-container {
+  .el-main {
+    padding: 0;
+    background-color: #ecf0f5;
+    .routes {
+      padding: 0 20px;
+      height: 35px;line-height: 35px;
+      background-color: #f1f2f3;
+      .el-breadcrumb {line-height: 35px;}
+    }
+    .main {
+      padding: 0 15px;
+
+      // 平台内容 布局
+      .container { }
+      .main-wrapper{
+        background-color: #fff;
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+
+        .main-header {
+          background-color: #f1f2f7;
+          padding: 0px 10px;
+          height: 45px;
+          line-height: 45px;
+          border-bottom:1px solid #ddd;
+          border-left: 1px solid #ddd;
+          font-size:15px;
+        }
+        .main-content {
+          border-radius: 5px;
+          overflow-y: auto;
+          padding: 14px 10px;
+          min-height: 100px;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from, 0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+  30% {
+    opacity: .9;
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+  }
+}
+
+// 动画-状态-闪烁
+.successAnimate {
+  width: 80px;
+  background: #67c23a;
+  color: #fff;
+  -webkit-animation: success 2s linear infinite;
+  -o-animation: success 2s linear infinite;
+  animation: success 2s linear infinite;
+}
+.dangerAnimate {
+  width: 80px;
+  background: #f56c6c;
+  color: #fff;
+  -webkit-animation: danger 2s linear infinite;
+  -o-animation: danger 2s linear infinite;
+  animation: danger 2s linear infinite;
+}
+.warningAnimate {
+  width: 80px;
+  background: #e6a23c;
+  color: #fff;
+  -webkit-animation: warning 2s linear infinite;
+  -o-animation: warning 2s linear infinite;
+  animation: warning 2s linear infinite;
+}
+
+@-webkit-keyframes danger {
+  from, 0%, to {
+    background: #fff;
+    color:#555;
+  }
+  30%, 80% {
+    background: #f56c6c;
+    color:#fff;
+  }
+  100% {
+    background: #fff;
+    color:#555;
+  }
+}
+@keyframes danger {
+  from, 0%, to {
+    background: #fff;
+    color:#555;
+  }
+  30%, 80% {
+    background: #f56c6c;
+    color:#fff;
+  }
+  100% {
+    background: #fff;
+    color:#555;
+  }
+}
+
+@-webkit-keyframes warning {
+  from, 0%, to {
+    background: #fff;
+    color:#555;
+  }
+  30%, 80% {
+    background: #e6a23c;
+    color:#fff;
+  }
+  100% {
+    background: #fff;
+    color:#555;
+  }
+}
+@keyframes warning {
+  from, 0%, to {
+    background: #fff;
+    color:#555;
+  }
+  30%, 80% {
+    background: #e6a23c;
+    color:#fff;
+  }
+  100% {
+    background: #fff;
+    color:#555;
+  }
+}
+
+@-webkit-keyframes success {
+  from, 0%, to {
+    background: #fff;
+    color:#555;
+  }
+  30%, 80% {
+    background:#67c23a;
+    color:#fff;
+  }
+  100% {
+    background: #fff;
+    color:#555;
+  }
+}
+
+@keyframes success {
+  from, 0%, to {
+    background: #fff;
+    color:#555;
+  }
+  30%, 80% {
+    background: #67c23a;
+    color:#fff;
+  }
+  100% {
+    background: #fff;
+    color:#555;
+  }
+}
+.hiddenTop {
+  .el-dialog__body{
+    padding: 0;
+  }
+  .el-dialog__header{
+    display: none;
+  }
+}
+.maplibTfctr_c{
+  display:none;
+}
+.maplibTfctr_status{
+  display: none;
+}
+
