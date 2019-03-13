@@ -4,10 +4,10 @@
 
  <div style="margin-top:10px;">
       <p style="font-size: 36px;line-height: 2.0;">登录页</p>
-      <img src="../../assets/login.png" alt=""></div>
+      <img src="/blob/master/src/assets/login.png" alt=""></div>
     <div style="margin-top:20px;">
       <p style="font-size: 36px;line-height: 2.0;">主页内容</p>
-      <img src="../../assets/table.png" alt="">
+      <img src="/blob/master/src/assets/table.png" alt="">
   </div>
 
 ## Build Setup
