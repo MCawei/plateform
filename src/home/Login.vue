@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="container">
       <div class="header">
         <img src="../assets/images/logo01.png" alt="">
@@ -6,7 +6,7 @@
       <div class="content">
         <div class="logo2">
           <div class="plate-desc">
-            <img src="../assets/images/title.png" alt="">
+            <!--<img src="../assets/images/title.png" alt="">-->
           </div>
         </div>
         <div class="login">
